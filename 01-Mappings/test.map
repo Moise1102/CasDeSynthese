@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map:map xmlns:map="http://www.indy.com/v2/map" id="_vz6w0HyHEe6F_fnQESD-eA" internalVersion="7" tech="resource.tech#_waYSMH8VEd2__Mzb_dB76A?fileId=_waYSMH8VEd2__Mzb_dB76A$type=tech$name=flow?">
+  <datastore id="_8JxPAHyOEe6F_fnQESD-eA" alias="SAS_EMAIL" dataset="_8J2ukHyOEe6F_fnQESD-eA" ref="resource.md#_AN0CUXyGEe6F_fnQESD-eA?fileId=_wdWFIHyDEe6F_fnQESD-eA$type=md$name=SAS_EMAIL?" subExpression="[A]">
+    <field id="_8JzEMXyOEe6F_fnQESD-eA" enable="true" insert="true" name="EMAIL" ref="resource.md#_AS4IgHyGEe6F_fnQESD-eA?fileId=_wdWFIHyDEe6F_fnQESD-eA$type=md$name=EMAIL?" update="true">
+      <expression id="_7VljkHyPEe6F_fnQESD-eA" location="SRC" setDescriptorRef="_7Vk8gHyPEe6F_fnQESD-eA">
+        <expression>EMAIL_CLIENT.fichier_parent</expression>
+      </expression>
+    </field>
+    <field id="_8JzrQXyOEe6F_fnQESD-eA" name="DATE_CREATION" ref="resource.md#_AS4IjXyGEe6F_fnQESD-eA?fileId=_wdWFIHyDEe6F_fnQESD-eA$type=md$name=DATE_CREATION?">
+      <expression id="_7VljkXyPEe6F_fnQESD-eA" setDescriptorRef="_7Vk8gHyPEe6F_fnQESD-eA">
+        <expression></expression>
+      </expression>
+    </field>
+    <field id="_8J0SUHyOEe6F_fnQESD-eA" name="ID_SOURCE" ref="resource.md#_AS4vkHyGEe6F_fnQESD-eA?fileId=_wdWFIHyDEe6F_fnQESD-eA$type=md$name=ID_SOURCE?">
+      <expression id="_7VljknyPEe6F_fnQESD-eA" setDescriptorRef="_7Vk8gHyPEe6F_fnQESD-eA">
+        <expression></expression>
+      </expression>
+    </field>
+    <field id="_8Jx2EXyOEe6F_fnQESD-eA" enable="true" insert="true" name="CLE_CLIENT" ref="resource.md#_AS26YHyGEe6F_fnQESD-eA?fileId=_wdWFIHyDEe6F_fnQESD-eA$type=md$name=CLE_CLIENT?" update="true" updateKey="true">
+      <expression id="_7VmKoHyPEe6F_fnQESD-eA" setDescriptorRef="_7Vk8gHyPEe6F_fnQESD-eA">
+        <expression>EMAIL_CLIENT.CLE_CLIENT</expression>
+      </expression>
+    </field>
+    <field id="_8JzEMHyOEe6F_fnQESD-eA" enable="true" insert="true" name="ACTION" ref="resource.md#_AS3hdXyGEe6F_fnQESD-eA?fileId=_wdWFIHyDEe6F_fnQESD-eA$type=md$name=ACTION?" update="true">
+      <expression id="_7VmKoXyPEe6F_fnQESD-eA" location="SRC" setDescriptorRef="_7Vk8gHyPEe6F_fnQESD-eA">
+        <expression>EMAIL_CLIENT.ACTION</expression>
+      </expression>
+    </field>
+    <field id="_8JzrQHyOEe6F_fnQESD-eA" enable="true" insert="true" name="STATUS" ref="resource.md#_AS4IhnyGEe6F_fnQESD-eA?fileId=_wdWFIHyDEe6F_fnQESD-eA$type=md$name=STATUS?" update="true">
+      <expression id="_7VmKonyPEe6F_fnQESD-eA" setDescriptorRef="_7Vk8gHyPEe6F_fnQESD-eA">
+        <expression>EMAIL_CLIENT.STATUS</expression>
+      </expression>
+    </field>
+    <setDescriptor id="_7Vk8gHyPEe6F_fnQESD-eA" label="A"/>
+  </datastore>
+  <datastore id="_IY3zsHyQEe6F_fnQESD-eA" alias="EMAIL_CLIENT" dataset="_IY6P8HyQEe6F_fnQESD-eA" ref="resource.md#_gWvbsXyIEe6F_fnQESD-eA?fileId=_FaryAHokEe6cgaTnMFlv7A$type=md$name=EMAIL_CLIENT?">
+    <field id="_IY4axXyQEe6F_fnQESD-eA" name="EMAIL" parent="_IY4awXyQEe6F_fnQESD-eA" ref="resource.md#_1p0XyHyIEe6F_fnQESD-eA?fileId=_FaryAHokEe6cgaTnMFlv7A$type=md$name=EMAIL?"/>
+    <field id="_IY4awXyQEe6F_fnQESD-eA" expand="true" name="EMAIL_CLIENT" ref="resource.md#_gWvbsXyIEe6F_fnQESD-eA?fileId=_FaryAHokEe6cgaTnMFlv7A$type=md$name=EMAIL_CLIENT?" updateKey="true"/>
+    <field id="_IY4awnyQEe6F_fnQESD-eA" name="TYPE_LIGNE" parent="_IY4awXyQEe6F_fnQESD-eA" ref="resource.md#_1pzwsHyIEe6F_fnQESD-eA?fileId=_FaryAHokEe6cgaTnMFlv7A$type=md$name=TYPE_LIGNE?"/>
+    <field id="_IY4aw3yQEe6F_fnQESD-eA" fullAlias="ACTION" name="ACTION" parent="_IY4awXyQEe6F_fnQESD-eA" ref="resource.md#_1p0XwHyIEe6F_fnQESD-eA?fileId=_FaryAHokEe6cgaTnMFlv7A$type=md$name=ACTION?"/>
+    <field id="_IY4axHyQEe6F_fnQESD-eA" fullAlias="CLE_CLIENT" name="CLE_CLIENT" parent="_IY4awXyQEe6F_fnQESD-eA" ref="resource.md#_1p0XxHyIEe6F_fnQESD-eA?fileId=_FaryAHokEe6cgaTnMFlv7A$type=md$name=CLE_CLIENT?"/>
+    <field id="_IY4axnyQEe6F_fnQESD-eA" fullAlias="STATUS" name="STATUS" parent="_IY4awXyQEe6F_fnQESD-eA" ref="resource.md#_1p0XzHyIEe6F_fnQESD-eA?fileId=_FaryAHokEe6cgaTnMFlv7A$type=md$name=STATUS?"/>
+    <field id="_rCVr0HzBEe6F_fnQESD-eA" fullAlias="fichier_parent" name="fichier_parent" parent="_IY4awXyQEe6F_fnQESD-eA" ref="resource.md#_moCDtHzBEe6F_fnQESD-eA?fileId=_FaryAHokEe6cgaTnMFlv7A$type=md$name=fichier_parent?"/>
+  </datastore>
+  <template id="_7Vom4HyPEe6F_fnQESD-eA" name="I_SAS_EMAIL" process="resource.proc#_jkWgEFEJEeO7Vo9WeM2sCg?fileId=_jkWgEFEJEeO7Vo9WeM2sCg$type=proc$name=INTEGRATION%20Oracle?" targetId="_8JxPAHyOEe6F_fnQESD-eA">
+    <parameter id="_D0U7kHy-Ee6F_fnQESD-eA" name="truncateTargetTable" value="true"/>
+  </template>
+  <template id="_IY8FIHyQEe6F_fnQESD-eA" name="L1_SAS_EMAIL" process="resource.proc#_a-mEoaIhEd68f8w2ej5O-w?fileId=_a-mEoaIhEd68f8w2ej5O-w$type=proc$name=LOAD%20File%20to%20Rdbms?" sourceId="_IY3zsHyQEe6F_fnQESD-eA" targetId="_8JxPAHyOEe6F_fnQESD-eA"/>
+  <dataSet id="_8J2ukHyOEe6F_fnQESD-eA">
+    <container>_8JxPAHyOEe6F_fnQESD-eA</container>
+  </dataSet>
+  <dataSet id="_IY6P8HyQEe6F_fnQESD-eA">
+    <container>_IY3zsHyQEe6F_fnQESD-eA</container>
+  </dataSet>
+  <hint>
+    <usedField>#_IY4aw3yQEe6F_fnQESD-eA</usedField>
+    <usedField>#_IY4axHyQEe6F_fnQESD-eA</usedField>
+    <usedField>#_IY4axnyQEe6F_fnQESD-eA</usedField>
+    <usedField>#_rCVr0HzBEe6F_fnQESD-eA</usedField>
+  </hint>
+  <diagram><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:map="http://www.indy.com/v2/map" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.1/notation" xsi:schemaLocation="http://www.eclipse.org/gmf/runtime/1.0.1/notation " xmi:id="_v2CQsHyHEe6F_fnQESD-eA" type="Map" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_8KN68HyOEe6F_fnQESD-eA" type="2004" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_8KOiAHyOEe6F_fnQESD-eA" type="5005"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_8KOiAXyOEe6F_fnQESD-eA" type="5007"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_8KOiAnyOEe6F_fnQESD-eA" type="7003"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_8KOiA3yOEe6F_fnQESD-eA" type="7009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_8KOiBHyOEe6F_fnQESD-eA" type="7004">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_8KOiBXyOEe6F_fnQESD-eA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_8KOiBnyOEe6F_fnQESD-eA"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_8KPJEHyOEe6F_fnQESD-eA" type="5009">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_8KPJEXyOEe6F_fnQESD-eA"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_8KPJEnyOEe6F_fnQESD-eA" type="7005">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_8KPJE3yOEe6F_fnQESD-eA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_8KPJFHyOEe6F_fnQESD-eA"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_8KPJFXyOEe6F_fnQESD-eA" type="7007"/>
+    <element xmi:type="map:Datastore" href="resource.map#_8JxPAHyOEe6F_fnQESD-eA?fileId=_vz6w0HyHEe6F_fnQESD-eA$type=map?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8KN68XyOEe6F_fnQESD-eA" x="767" y="379"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_IZEA8HyQEe6F_fnQESD-eA" type="2004" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_IZEA8nyQEe6F_fnQESD-eA" type="5005"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_IZEA83yQEe6F_fnQESD-eA" type="5007"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_IZEA9HyQEe6F_fnQESD-eA" type="7003"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_IZEA9XyQEe6F_fnQESD-eA" type="7009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_IZEA9nyQEe6F_fnQESD-eA" type="7004">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_IZEA93yQEe6F_fnQESD-eA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_IZEA-HyQEe6F_fnQESD-eA"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_IZEA-XyQEe6F_fnQESD-eA" type="5009">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_IZEA-nyQEe6F_fnQESD-eA"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_IZEA-3yQEe6F_fnQESD-eA" type="7005">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_IZEA_HyQEe6F_fnQESD-eA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_IZEA_XyQEe6F_fnQESD-eA"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_IZEA_nyQEe6F_fnQESD-eA" type="7007"/>
+    <element xmi:type="map:Datastore" href="resource.map#_IY3zsHyQEe6F_fnQESD-eA?fileId=_vz6w0HyHEe6F_fnQESD-eA$type=map?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IZEA8XyQEe6F_fnQESD-eA" x="358" y="414"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_v2CQsXyHEe6F_fnQESD-eA"/>
+  <element xmi:type="map:Map" href="resource.map#_vz6w0HyHEe6F_fnQESD-eA?fileId=_vz6w0HyHEe6F_fnQESD-eA$type=map$name=test?"/>
+  <edges xmi:type="notation:Edge" xmi:id="_IZKuoHyQEe6F_fnQESD-eA" type="targetLink" source="_8KN68HyOEe6F_fnQESD-eA" target="_IZEA8HyQEe6F_fnQESD-eA">
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IZKuoXyQEe6F_fnQESD-eA" points="[-171, -81, 791, 379]$[-962, -460, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_IZLVsHyQEe6F_fnQESD-eA" type="targetDataSetLink" source="_8KN68HyOEe6F_fnQESD-eA" target="_8KN68HyOEe6F_fnQESD-eA">
+    <element xmi:type="map:DataSet" href="resource.map#_IY6P8HyQEe6F_fnQESD-eA?fileId=_vz6w0HyHEe6F_fnQESD-eA$type=map?"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IZLVsXyQEe6F_fnQESD-eA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_IZLVsnyQEe6F_fnQESD-eA" type="targetSetLink" source="_8KN68HyOEe6F_fnQESD-eA" target="_8KN68HyOEe6F_fnQESD-eA">
+    <element xmi:type="map:SetDescriptor" href="resource.map#_7Vk8gHyPEe6F_fnQESD-eA?fileId=_vz6w0HyHEe6F_fnQESD-eA$type=map?"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IZLVs3yQEe6F_fnQESD-eA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+</notation:Diagram>
+]]></diagram>
+</map:map>
