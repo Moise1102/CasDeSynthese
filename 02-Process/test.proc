@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proc:process xmlns:proc="http://www.example.org/proc" id="afc9b1a6-7ada-4c9b-beab-b413f540c32b">
+  <actionCode id="c423b0eb-fe9d-4419-82b3-cbb25e28a1e3" isBeginAction="false" name="Sql To Parameters" nbCycles="-1" toleratedError="false" technology="com.indy.engine.actionCodes.sqlToParameters">
+    <link id="50cbd571-cbd6-46b7-b156-f5c56aaffabf" executionCondition="${entete}$==1 &amp;&amp; ${pied}$==1 &amp;&amp; ${nb_ligne_r}$ == ${nb_ligne}$" executionType="OK" generationType="OK_KO" mandatory="1" targetId="3db4413c-1dc5-47c1-a279-356fe9100435"/>
+    <link id="6e4065c9-0406-4415-a4c7-33c92bf6a913" executionCondition="${Sql To Parameters/entete}$!=1 || ${Sql To Parameters/pied}$!=1 || ${Sql To Parameters/nb_ligne_r}$ != ${Sql To Parameters/nb_ligne}$" executionType="OK" generationType="OK_KO" mandatory="1" targetId="61af9656-33d2-4754-82bd-592e23c0d3ac"/>
+    <metaDataLink id="ac6ce6b9-8cd5-4169-adda-8e189b1425a8" name="FILE_CONTROL" target="resource.md#_c-QgEH1QEe6F_fnQESD-eA?fileId=_wdWFIHyDEe6F_fnQESD-eA$type=md$name=FILE_CONTROL?"/>
+    <parameter id="8510450a-7f4e-4ccb-b8f8-52e8bd74874c" name="SQL_CONNECTION" type="String"/>
+    <code>&lt;sqlToParameters>&#xD;
+	&lt;parameter name=&quot;~/entete&quot; type=&quot;Integer&quot;>&#xD;
+ select count(*) from %x{$FILE_CONTROL/tech:physicalPath()}x%&#xD;
+ where CHAMP1 = '000'&#xD;
+	&lt;/parameter>&#xD;
+	&#xD;
+	&lt;parameter name=&quot;~/pied&quot; type=&quot;Integer&quot;>&#xD;
+ select count(*) from %x{$FILE_CONTROL/tech:physicalPath()}x%&#xD;
+ where CHAMP1 = '999'&#xD;
+	&lt;/parameter>&#xD;
+	&#xD;
+	&lt;parameter name=&quot;~/nb_ligne_r&quot; type=&quot;Integer&quot;>&#xD;
+ select count(*) from %x{$FILE_CONTROL/tech:physicalPath()}x%&#xD;
+	&lt;/parameter>&#xD;
+	&#xD;
+	&lt;parameter name=&quot;~/nb_ligne&quot; type=&quot;Integer&quot;>&#xD;
+ select champ2 from %x{$FILE_CONTROL/tech:physicalPath()}x%&#xD;
+ where champ1 = '999'&#xD;
+	&lt;/parameter>&#xD;
+&lt;/sqlToParameters></code>
+  </actionCode>
+  <actionCode id="61af9656-33d2-4754-82bd-592e23c0d3ac" enable="false" isBeginAction="false" name="FIN" nbCycles="-1" toleratedError="false" technology="com.indy.engine.actionCodes.EmptyActionCodeI"/>
+  <actionCode id="a8af45bb-44d9-4f3b-a27b-f5bd4672b0e9" isBeginAction="false" name="EmptyAction" nbCycles="-1" toleratedError="false" technology="com.indy.engine.actionCodes.EmptyActionCodeI"/>
+  <actionProcessRef id="3db4413c-1dc5-47c1-a279-356fe9100435" enable="true" isBeginAction="false" name="test3" nbCycles="-1" toleratedError="false" processMap="true" targetName="resource.map#__rWxQH1QEe6F_fnQESD-eA?fileId=__rWxQH1QEe6F_fnQESD-eA$name=test3$type=map?"/>
+  <diagram><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.1/notation" xmlns:proc="http://www.example.org/proc" xsi:schemaLocation="http://www.eclipse.org/gmf/runtime/1.0.1/notation http://www.eclipse.org/gmf/runtime/1.0.2/notation#/?fileId=afc9b1a6-7ada-4c9b-beab-b413f540c32b?" xmi:id="_BHLx4H1YEe6F_fnQESD-eA" type="Proc" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_E94WoH1YEe6F_fnQESD-eA" type="2001">
+    <children xmi:type="notation:Node" xmi:id="_E96y4H1YEe6F_fnQESD-eA" type="5001"/>
+    <children xmi:type="notation:Node" xmi:id="_E96y4X1YEe6F_fnQESD-eA" type="7001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_E96y4n1YEe6F_fnQESD-eA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_E96y431YEe6F_fnQESD-eA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_E96y5H1YEe6F_fnQESD-eA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_E96y5X1YEe6F_fnQESD-eA" type="7002">
+      <children xmi:type="notation:Node" xmi:id="_RPi8kH1YEe6F_fnQESD-eA" type="3002">
+        <element xmi:type="proc:MetaDataLink" href="resource.proc#ac6ce6b9-8cd5-4169-adda-8e189b1425a8?fileId=afc9b1a6-7ada-4c9b-beab-b413f540c32b$type=proc?"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_RPi8kX1YEe6F_fnQESD-eA"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_E96y5n1YEe6F_fnQESD-eA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_E96y531YEe6F_fnQESD-eA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_E96y6H1YEe6F_fnQESD-eA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_E94WoX1YEe6F_fnQESD-eA" fontName="Segoe UI"/>
+    <element xmi:type="proc:ActionCode" href="resource.proc#c423b0eb-fe9d-4419-82b3-cbb25e28a1e3?fileId=afc9b1a6-7ada-4c9b-beab-b413f540c32b$type=proc$name=Sql%20To%20Parameters?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E94Won1YEe6F_fnQESD-eA" x="250" y="106"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_p_5JYH1bEe6F_fnQESD-eA" type="2003">
+    <children xmi:type="notation:Node" xmi:id="_p_6-kH1bEe6F_fnQESD-eA" type="5003"/>
+    <children xmi:type="notation:Node" xmi:id="_p_6-kX1bEe6F_fnQESD-eA" type="7003">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_p_6-kn1bEe6F_fnQESD-eA" collapsed="true"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_p_6-k31bEe6F_fnQESD-eA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_p_6-lH1bEe6F_fnQESD-eA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_p_6-lX1bEe6F_fnQESD-eA" type="7004">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_p_6-ln1bEe6F_fnQESD-eA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_p_6-l31bEe6F_fnQESD-eA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_p_6-mH1bEe6F_fnQESD-eA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_p_5JYX1bEe6F_fnQESD-eA" fontName="Segoe UI"/>
+    <element xmi:type="proc:ActionProcessRef" href="resource.proc#3db4413c-1dc5-47c1-a279-356fe9100435?fileId=afc9b1a6-7ada-4c9b-beab-b413f540c32b$type=proc$name=test3?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p_5JYn1bEe6F_fnQESD-eA" x="355" y="289"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_uYvY8H1bEe6F_fnQESD-eA" type="2001">
+    <children xmi:type="notation:Node" xmi:id="_uYxOIH1bEe6F_fnQESD-eA" type="5001"/>
+    <children xmi:type="notation:Node" xmi:id="_uYxOIX1bEe6F_fnQESD-eA" type="7001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_uYxOIn1bEe6F_fnQESD-eA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_uYxOI31bEe6F_fnQESD-eA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_uYxOJH1bEe6F_fnQESD-eA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_uYxOJX1bEe6F_fnQESD-eA" type="7002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_uYxOJn1bEe6F_fnQESD-eA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_uYxOJ31bEe6F_fnQESD-eA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_uYxOKH1bEe6F_fnQESD-eA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_uYvY8X1bEe6F_fnQESD-eA" fontName="Segoe UI"/>
+    <element xmi:type="proc:ActionCode" href="resource.proc#61af9656-33d2-4754-82bd-592e23c0d3ac?fileId=afc9b1a6-7ada-4c9b-beab-b413f540c32b$type=proc$name=FIN?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uYvY8n1bEe6F_fnQESD-eA" x="547" y="261"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_Q-aR0H1vEe6F_fnQESD-eA" type="2001">
+    <children xmi:type="notation:Node" xmi:id="_Q-cuEH1vEe6F_fnQESD-eA" type="5001"/>
+    <children xmi:type="notation:Node" xmi:id="_Q-cuEX1vEe6F_fnQESD-eA" type="7001">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_Q-cuEn1vEe6F_fnQESD-eA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Q-cuE31vEe6F_fnQESD-eA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Q-cuFH1vEe6F_fnQESD-eA"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_Q-cuFX1vEe6F_fnQESD-eA" type="7002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_Q-cuFn1vEe6F_fnQESD-eA"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_Q-cuF31vEe6F_fnQESD-eA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_Q-cuGH1vEe6F_fnQESD-eA"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_Q-aR0X1vEe6F_fnQESD-eA" fontName="Segoe UI"/>
+    <element xmi:type="proc:ActionCode" href="resource.proc#a8af45bb-44d9-4f3b-a27b-f5bd4672b0e9?fileId=afc9b1a6-7ada-4c9b-beab-b413f540c32b$type=proc$name=EmptyAction?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Q-aR0n1vEe6F_fnQESD-eA" x="210" y="264" width="25" height="5"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_BHLx4X1YEe6F_fnQESD-eA"/>
+  <element xmi:type="proc:ActionProcess" href="resource.proc#afc9b1a6-7ada-4c9b-beab-b413f540c32b?fileId=afc9b1a6-7ada-4c9b-beab-b413f540c32b$type=proc$name=test?"/>
+  <edges xmi:type="notation:Edge" xmi:id="_qZPdgH1bEe6F_fnQESD-eA" type="4001" source="_E94WoH1YEe6F_fnQESD-eA" target="_p_5JYH1bEe6F_fnQESD-eA">
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_qZPdgX1bEe6F_fnQESD-eA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_qZPdgn1bEe6F_fnQESD-eA" fontName="Segoe UI"/>
+    <element xmi:type="proc:Link" href="resource.proc#50cbd571-cbd6-46b7-b156-f5c56aaffabf?fileId=afc9b1a6-7ada-4c9b-beab-b413f540c32b$type=proc?"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_qZPdg31bEe6F_fnQESD-eA" points="[-1, 20, 4, -103]$[-1, 103, 4, -20]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_qZQEkH1bEe6F_fnQESD-eA" id="(0.46875,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_z9y88H1bEe6F_fnQESD-eA" type="4001" source="_E94WoH1YEe6F_fnQESD-eA" target="_uYvY8H1bEe6F_fnQESD-eA">
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_z9y88X1bEe6F_fnQESD-eA"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_z9y88n1bEe6F_fnQESD-eA" fontName="Segoe UI"/>
+    <element xmi:type="proc:Link" href="resource.proc#6e4065c9-0406-4415-a4c7-33c92bf6a913?fileId=afc9b1a6-7ada-4c9b-beab-b413f540c32b$type=proc?"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_z9y8831bEe6F_fnQESD-eA" points="[39, 20, -148, -77]$[186, 75, -1, -22]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_z90LEH1bEe6F_fnQESD-eA" id="(0.46875,1.0)"/>
+  </edges>
+</notation:Diagram>
+]]></diagram>
+</proc:process>

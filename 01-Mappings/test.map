@@ -60,26 +60,6 @@
   </hint>
   <diagram><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:map="http://www.indy.com/v2/map" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.1/notation" xsi:schemaLocation="http://www.eclipse.org/gmf/runtime/1.0.1/notation " xmi:id="_v2CQsHyHEe6F_fnQESD-eA" type="Map" measurementUnit="Pixel">
-  <children xmi:type="notation:Shape" xmi:id="_8KN68HyOEe6F_fnQESD-eA" type="2004" fontName="Segoe UI">
-    <children xmi:type="notation:DecorationNode" xmi:id="_8KOiAHyOEe6F_fnQESD-eA" type="5005"/>
-    <children xmi:type="notation:DecorationNode" xmi:id="_8KOiAXyOEe6F_fnQESD-eA" type="5007"/>
-    <children xmi:type="notation:DecorationNode" xmi:id="_8KOiAnyOEe6F_fnQESD-eA" type="7003"/>
-    <children xmi:type="notation:DecorationNode" xmi:id="_8KOiA3yOEe6F_fnQESD-eA" type="7009"/>
-    <children xmi:type="notation:BasicCompartment" xmi:id="_8KOiBHyOEe6F_fnQESD-eA" type="7004">
-      <styles xmi:type="notation:SortingStyle" xmi:id="_8KOiBXyOEe6F_fnQESD-eA"/>
-      <styles xmi:type="notation:FilteringStyle" xmi:id="_8KOiBnyOEe6F_fnQESD-eA"/>
-    </children>
-    <children xmi:type="notation:DecorationNode" xmi:id="_8KPJEHyOEe6F_fnQESD-eA" type="5009">
-      <styles xmi:type="notation:DrawerStyle" xmi:id="_8KPJEXyOEe6F_fnQESD-eA"/>
-    </children>
-    <children xmi:type="notation:DecorationNode" xmi:id="_8KPJEnyOEe6F_fnQESD-eA" type="7005">
-      <styles xmi:type="notation:SortingStyle" xmi:id="_8KPJE3yOEe6F_fnQESD-eA"/>
-      <styles xmi:type="notation:FilteringStyle" xmi:id="_8KPJFHyOEe6F_fnQESD-eA"/>
-    </children>
-    <children xmi:type="notation:BasicCompartment" xmi:id="_8KPJFXyOEe6F_fnQESD-eA" type="7007"/>
-    <element xmi:type="map:Datastore" href="resource.map#_8JxPAHyOEe6F_fnQESD-eA?fileId=_vz6w0HyHEe6F_fnQESD-eA$type=map?"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8KN68XyOEe6F_fnQESD-eA" x="767" y="379"/>
-  </children>
   <children xmi:type="notation:Shape" xmi:id="_IZEA8HyQEe6F_fnQESD-eA" type="2004" fontName="Segoe UI">
     <children xmi:type="notation:DecorationNode" xmi:id="_IZEA8nyQEe6F_fnQESD-eA" type="5005"/>
     <children xmi:type="notation:DecorationNode" xmi:id="_IZEA83yQEe6F_fnQESD-eA" type="5007"/>
@@ -98,7 +78,27 @@
     </children>
     <children xmi:type="notation:BasicCompartment" xmi:id="_IZEA_nyQEe6F_fnQESD-eA" type="7007"/>
     <element xmi:type="map:Datastore" href="resource.map#_IY3zsHyQEe6F_fnQESD-eA?fileId=_vz6w0HyHEe6F_fnQESD-eA$type=map?"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IZEA8XyQEe6F_fnQESD-eA" x="358" y="414"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IZEA8XyQEe6F_fnQESD-eA" x="317" y="186"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_8KN68HyOEe6F_fnQESD-eA" type="2004" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_8KOiAHyOEe6F_fnQESD-eA" type="5005"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_8KOiAXyOEe6F_fnQESD-eA" type="5007"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_8KOiAnyOEe6F_fnQESD-eA" type="7003"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_8KOiA3yOEe6F_fnQESD-eA" type="7009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_8KOiBHyOEe6F_fnQESD-eA" type="7004">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_8KOiBXyOEe6F_fnQESD-eA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_8KOiBnyOEe6F_fnQESD-eA"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_8KPJEHyOEe6F_fnQESD-eA" type="5009">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_8KPJEXyOEe6F_fnQESD-eA"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_8KPJEnyOEe6F_fnQESD-eA" type="7005">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_8KPJE3yOEe6F_fnQESD-eA"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_8KPJFHyOEe6F_fnQESD-eA"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_8KPJFXyOEe6F_fnQESD-eA" type="7007"/>
+    <element xmi:type="map:Datastore" href="resource.map#_8JxPAHyOEe6F_fnQESD-eA?fileId=_vz6w0HyHEe6F_fnQESD-eA$type=map?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8KN68XyOEe6F_fnQESD-eA" x="708" y="198"/>
   </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_v2CQsXyHEe6F_fnQESD-eA"/>
   <element xmi:type="map:Map" href="resource.map#_vz6w0HyHEe6F_fnQESD-eA?fileId=_vz6w0HyHEe6F_fnQESD-eA$type=map$name=test?"/>
