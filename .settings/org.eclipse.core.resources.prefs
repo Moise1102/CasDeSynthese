@@ -1,5 +1,6 @@
 eclipse.preferences.version=1
+encoding//01-Mappings/LOAD\ DWH_COMPTE.map=UTF-8
 encoding//01-Mappings/LOAD_FILE_CONTROL.map=UTF-8
 encoding//01-Mappings/LOAD_SAS_TABLE.map=UTF-8
-encoding//01-Mappings/test.map=UTF-8
+encoding//01-Mappings/TRANSCO\ COMPTE.map=UTF-8
 encoding//02-Process/test.proc=UTF-8
