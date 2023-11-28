@@ -308,12 +308,22 @@
     <expression>SOURCE.SOURCE = stage.SOURCE</expression>
   </join>
   <template id="_C0kakH11Ee6F_fnQESD-eA" name="I_stage" process="resource.proc#_8zSzQdu8EeWIdu0rdnx7VQ?fileId=_8zSzQdu8EeWIdu0rdnx7VQ$type=proc$name=STAGING%20Oracle%20As%20Table?" targetId="_CjDz0H11Ee6F_fnQESD-eA"/>
-  <template id="_6ulaMIUwEe6_ZKlljuliUA" name="I_SAS_COMPTE" process="resource.proc#_jkWgEFEJEeO7Vo9WeM2sCg?fileId=_jkWgEFEJEeO7Vo9WeM2sCg$type=proc$name=INTEGRATION%20Oracle?" targetId="_0FV5gIUpEe6_ZKlljuliUA"/>
+  <template id="_6ulaMIUwEe6_ZKlljuliUA" name="I_SAS_COMPTE" process="resource.proc#_jkWgEFEJEeO7Vo9WeM2sCg?fileId=_jkWgEFEJEeO7Vo9WeM2sCg$type=proc$name=INTEGRATION%20Oracle?" targetId="_0FV5gIUpEe6_ZKlljuliUA">
+    <parameter id="_VdVvMIrsEe6eVfFnYwgOWA" name="truncateTargetTable" value="true"/>
+  </template>
   <template id="_MxDH0IU2Ee6_ZKlljuliUA" name="I_SOURCE" process="resource.proc#_jkWgEFEJEeO7Vo9WeM2sCg?fileId=_jkWgEFEJEeO7Vo9WeM2sCg$type=proc$name=INTEGRATION%20Oracle?" targetId="_eSpCMIUpEe6_ZKlljuliUA"/>
-  <template id="_uGtaEIU4Ee6_ZKlljuliUA" name="I_SAS_TELEPHONE" process="resource.proc#_jkWgEFEJEeO7Vo9WeM2sCg?fileId=_jkWgEFEJEeO7Vo9WeM2sCg$type=proc$name=INTEGRATION%20Oracle?" targetId="_4w0xMIUpEe6_ZKlljuliUA"/>
-  <template id="_uuz74IU4Ee6_ZKlljuliUA" name="I_SAS_CLIENT" process="resource.proc#_jkWgEFEJEeO7Vo9WeM2sCg?fileId=_jkWgEFEJEeO7Vo9WeM2sCg$type=proc$name=INTEGRATION%20Oracle?" targetId="_0icsQIUpEe6_ZKlljuliUA"/>
-  <template id="_vQwyYIU4Ee6_ZKlljuliUA" name="I_SAS_EMAIL" process="resource.proc#_jkWgEFEJEeO7Vo9WeM2sCg?fileId=_jkWgEFEJEeO7Vo9WeM2sCg$type=proc$name=INTEGRATION%20Oracle?" targetId="_4Sku8IUpEe6_ZKlljuliUA"/>
-  <template id="_v0cuQIU4Ee6_ZKlljuliUA" name="I_SAS_ADRESSE" process="resource.proc#_jkWgEFEJEeO7Vo9WeM2sCg?fileId=_jkWgEFEJEeO7Vo9WeM2sCg$type=proc$name=INTEGRATION%20Oracle?" targetId="_1kFvcIUpEe6_ZKlljuliUA"/>
+  <template id="_uGtaEIU4Ee6_ZKlljuliUA" name="I_SAS_TELEPHONE" process="resource.proc#_jkWgEFEJEeO7Vo9WeM2sCg?fileId=_jkWgEFEJEeO7Vo9WeM2sCg$type=proc$name=INTEGRATION%20Oracle?" targetId="_4w0xMIUpEe6_ZKlljuliUA">
+    <parameter id="_WpWPUIrsEe6eVfFnYwgOWA" name="truncateTargetTable" value="true"/>
+  </template>
+  <template id="_uuz74IU4Ee6_ZKlljuliUA" name="I_SAS_CLIENT" process="resource.proc#_jkWgEFEJEeO7Vo9WeM2sCg?fileId=_jkWgEFEJEeO7Vo9WeM2sCg$type=proc$name=INTEGRATION%20Oracle?" targetId="_0icsQIUpEe6_ZKlljuliUA">
+    <parameter id="_XmwSwIrsEe6eVfFnYwgOWA" name="truncateTargetTable" value="true"/>
+  </template>
+  <template id="_vQwyYIU4Ee6_ZKlljuliUA" name="I_SAS_EMAIL" process="resource.proc#_jkWgEFEJEeO7Vo9WeM2sCg?fileId=_jkWgEFEJEeO7Vo9WeM2sCg$type=proc$name=INTEGRATION%20Oracle?" targetId="_4Sku8IUpEe6_ZKlljuliUA">
+    <parameter id="_YlhoIIrsEe6eVfFnYwgOWA" name="truncateTargetTable" value="true"/>
+  </template>
+  <template id="_v0cuQIU4Ee6_ZKlljuliUA" name="I_SAS_ADRESSE" process="resource.proc#_jkWgEFEJEeO7Vo9WeM2sCg?fileId=_jkWgEFEJEeO7Vo9WeM2sCg$type=proc$name=INTEGRATION%20Oracle?" targetId="_1kFvcIUpEe6_ZKlljuliUA">
+    <parameter id="_ZgEk0IrsEe6eVfFnYwgOWA" name="truncateTargetTable" value="true"/>
+  </template>
   <query id="_CjDz0H11Ee6F_fnQESD-eA" alias="stage" dataset="_0FhAAIUmEe6_ZKlljuliUA" priorityOrder="2" stagingArea="resource.md#_Amy08HyEEe6F_fnQESD-eA?fileId=_wdWFIHyDEe6F_fnQESD-eA$type=md$name=CSG1_ORA4?" subExpression="[A]">
     <field id="_C0fiEH11Ee6F_fnQESD-eA" name="CHAMP1">
       <expression id="_C0gJIX11Ee6F_fnQESD-eA" location="WRK" setDescriptorRef="_C0gJIH11Ee6F_fnQESD-eA">
@@ -784,9 +794,9 @@
     <element xmi:type="map:DataSet" href="resource.map#_0FhAAIUmEe6_ZKlljuliUA?fileId=__rWxQH1QEe6F_fnQESD-eA$type=map?"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_cPTxIYUsEe6_ZKlljuliUA" points="[0, 0, -748, -735]$[686, 674, -62, -61]"/>
   </edges>
-  <edges xmi:type="notation:Edge" xmi:id="_sLmYQIU4Ee6_ZKlljuliUA" type="joinLink" source="_sLjU8IU4Ee6_ZKlljuliUA" target="_4xHFEIUpEe6_ZKlljuliUA">
+  <edges xmi:type="notation:Edge" xmi:id="_LuwxEIrsEe6eVfFnYwgOWA" type="joinLink" source="_LuttwIrsEe6eVfFnYwgOWA" target="_4xHFEIUpEe6_ZKlljuliUA">
     <element xmi:type="map:DataSet" href="resource.map#_0FhAAIUmEe6_ZKlljuliUA?fileId=__rWxQH1QEe6F_fnQESD-eA$type=map?"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_sLmYQYU4Ee6_ZKlljuliUA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_LuwxEYrsEe6eVfFnYwgOWA" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
   </edges>
 </notation:Diagram>
 ]]></diagram>
