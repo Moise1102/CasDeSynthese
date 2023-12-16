@@ -28,7 +28,7 @@
     </field>
     <field id="_LW6XYYV-Ee6_ZKlljuliUA" enable="true" insert="true" name="TYPE" ref="resource.md#_5CwEhoVyEe6_ZKlljuliUA?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=TYPE?" update="true">
       <expression id="_MOzBoYV-Ee6_ZKlljuliUA" setDescriptorRef="_MOxzgIV-Ee6_ZKlljuliUA">
-        <expression>nvl(TRANSCO_2.LIBELLE, 'Autre')</expression>
+        <expression>nvl(TRANSCO_2.LIBELLE, 'inconnu')</expression>
       </expression>
     </field>
     <field id="_LW5wUYV-Ee6_ZKlljuliUA" name="ID_COMPTE" ref="resource.md#_5Cu2YIVyEe6_ZKlljuliUA?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=ID_COMPTE?" updateKey="false">
@@ -53,6 +53,9 @@
     </field>
     <constraint id="_LW6-cYV-Ee6_ZKlljuliUA" name="PK_DWH_COMPTE" ref="resource.md#_5RMwMIVyEe6_ZKlljuliUA?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=PK_DWH_COMPTE?" reject="false"/>
     <constraint id="_x6VI0IluEe6eVfFnYwgOWA" name="CK_CABINET" ref="resource.md#_b4wvEYluEe6eVfFnYwgOWA?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=CK_CABINET?" reject="true"/>
+    <constraint id="_oceriJXpEe6o-PbYFHOjDw" name="CK_CLE_COMPTE" ref="resource.md#_6HsDoZXWEe6o-PbYFHOjDw?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=CK_CLE_COMPTE?" reject="true"/>
+    <constraint id="_oceriZXpEe6o-PbYFHOjDw" name="CK_STATUS" ref="resource.md#_MAJS8ZXXEe6o-PbYFHOjDw?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=CK_STATUS?" reject="true"/>
+    <constraint id="_ocfSkJXpEe6o-PbYFHOjDw" name="CK_TYPE" ref="resource.md#_f9d9AZXXEe6o-PbYFHOjDw?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=CK_TYPE?" reject="true"/>
     <setDescriptor id="_MOxzgIV-Ee6_ZKlljuliUA" label="A"/>
   </datastore>
   <datastore id="_nTSdQIigEe6IrbQn0Hrt2g" alias="TRANSCO" dataset="_Za4asIV5Ee6_ZKlljuliUA" ref="resource.md#_Xv_mMYV5Ee6_ZKlljuliUA?fileId=_jy4uQIPiEe6_ZKlljuliUA$type=md$name=TRANSCO?">
@@ -78,7 +81,9 @@ and TRANSCO.TYPE = 'CABINET'
 and TRANSCO.CATEGORIE = 'COMPTE']]></expression>
   </join>
   <template id="_MO020IV-Ee6_ZKlljuliUA" name="I_DWH_COMPTE" process="resource.proc#_jkWgEFEJEeO7Vo9WeM2sCg?fileId=_jkWgEFEJEeO7Vo9WeM2sCg$type=proc$name=INTEGRATION%20Oracle?" targetId="_LW5JQIV-Ee6_ZKlljuliUA"/>
-  <template id="_z-Be4IluEe6eVfFnYwgOWA" name="R_DWH_COMPTE" process="resource.proc#_cvMAIERgEd22W6kpnG-bRg?fileId=_cvMAIERgEd22W6kpnG-bRg$type=proc$name=REJECT%20Oracle?" targetId="_LW5JQIV-Ee6_ZKlljuliUA"/>
+  <template id="_z-Be4IluEe6eVfFnYwgOWA" name="R_DWH_COMPTE" process="resource.proc#_cvMAIERgEd22W6kpnG-bRg?fileId=_cvMAIERgEd22W6kpnG-bRg$type=proc$name=REJECT%20Oracle?" targetId="_LW5JQIV-Ee6_ZKlljuliUA">
+    <parameter id="_AyWwkJXyEe6o-PbYFHOjDw" name="deletePreviousRejects" value="false"/>
+  </template>
   <dataSet id="_Za4asIV5Ee6_ZKlljuliUA">
     <container>_Za0wUIV5Ee6_ZKlljuliUA</container>
     <container>_oBqmMIigEe6IrbQn0Hrt2g</container>

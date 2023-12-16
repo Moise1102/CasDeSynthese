@@ -1,4 +1,9 @@
 eclipse.preferences.version=1
+encoding//01-Mappings/DELETE_DWH_ADRESSE.map=UTF-8
+encoding//01-Mappings/DELETE_DWH_CLIENT.map=UTF-8
+encoding//01-Mappings/DELETE_DWH_COMPTE.map=UTF-8
+encoding//01-Mappings/DELETE_DWH_EMAIL.map=UTF-8
+encoding//01-Mappings/DELETE_DWH_TELEPHONE.map=UTF-8
 encoding//01-Mappings/LOAD\ DWH_COMPTE.map=UTF-8
 encoding//01-Mappings/LOAD_DWH_ADRESSE.map=UTF-8
 encoding//01-Mappings/LOAD_DWH_CLIENT.map=UTF-8
@@ -8,3 +13,4 @@ encoding//01-Mappings/LOAD_FILE_CONTROL.map=UTF-8
 encoding//01-Mappings/LOAD_SAS_TABLE.map=UTF-8
 encoding//02-Process/LOAD_TABLE.proc=UTF-8
 encoding//02-Process/SCAN_REPOSITORY.proc=UTF-8
+encoding//03-Main_Process/Main.proc=UTF-8

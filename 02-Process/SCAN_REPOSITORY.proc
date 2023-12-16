@@ -6,7 +6,9 @@
     <metaDataLink id="b122d403-e669-4b6e-b6ef-1ec2bc5306b9" name="IND_SESSION_FILE_OP_LST" target="resource.md#_cldNEYvLEe6GX-JL_DhDSg?fileId=_jy4uQIPiEe6_ZKlljuliUA$type=md$name=IND_SESSION_FILE_OP_LST?"/>
     <parameter id="60708be8-c7e9-4a66-aa29-f6b7b7d9669e" name="SQL_CONNECTION" type="String"/>
     <parameter id="cccba918-77e5-47be-9e7f-4025d7c6a7f5" name="SQL_ACTION_TYPE" type="String" value="SELECT"/>
-    <code>select file_name  from %x{$IND_SESSION_FILE_OP_LST/tech:physicalPath()}x%</code>
+    <code>select file_name,TO_DATE(SUBSTR(file_name, INSTR(file_name, '_', 1, 2) + 1, 8), 'YYYYMMDD')  &#xD;
+from %x{$IND_SESSION_FILE_OP_LST/tech:physicalPath()}x%&#xD;
+order by TO_DATE(SUBSTR(file_name, INSTR(file_name, '_', 1, 2) + 1, 8), 'YYYYMMDD')</code>
   </actionCode>
   <actionCode id="973e669f-e5b5-4c7f-95cb-79004e12b3e9" enable="true" isBeginAction="false" name="FileWait" nbCycles="-1" toleratedError="false" technology="com.indy.engine.actionCodes.FileWaitActionCodeI">
     <link id="1d469fec-d110-4e44-81e4-6d6210f7ed27" executionType="OK" generationType="OK_KO" mandatory="1" targetId="18d845e3-b6fc-47fc-9ae2-c1bcf95b2769"/>

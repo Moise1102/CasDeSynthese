@@ -63,7 +63,7 @@
     </field>
     <field id="_vtkegobKEe6ks8FmZ4As0Q" enable="true" insert="true" name="MUTUELLE" ref="resource.md#_5plbAIVyEe6_ZKlljuliUA?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=MUTUELLE?" update="true">
       <expression id="_3MyCHYbKEe6ks8FmZ4As0Q" setDescriptorRef="_3MyCEIbKEe6ks8FmZ4As0Q">
-        <expression>SAS_CLIENT.MUTUELLE</expression>
+        <expression>nvl(TRANSCO_4.LIBELLE,'Autre')</expression>
       </expression>
     </field>
     <field id="_vtbUk4bKEe6ks8FmZ4As0Q" enable="true" insert="true" name="ID_COMPTE" ref="resource.md#_5pf7cIVyEe6_ZKlljuliUA?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=ID_COMPTE?" update="true">
@@ -74,6 +74,9 @@
     <constraint id="_vtkehobKEe6ks8FmZ4As0Q" name="FK_COMPTE_CLIENT" ref="resource.md#_6PXBkIVyEe6_ZKlljuliUA?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=FK_COMPTE_CLIENT?" reject="true"/>
     <constraint id="_vtkeh4bKEe6ks8FmZ4As0Q" name="PK_DWH_CLIENT" ref="resource.md#_5pyPUIVyEe6_ZKlljuliUA?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=PK_DWH_CLIENT?" reject="false"/>
     <constraint id="_HwV-MIbPEe6hMcZPwGwPvA" name="CK_CLIENT_COMPTE" ref="resource.md#_1H7HAYbNEe6hMcZPwGwPvA?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=CK_CLIENT_COMPTE?" reject="true"/>
+    <constraint id="_6mSHXJXaEe6o-PbYFHOjDw" name="CK_CLE_CLIENT" ref="resource.md#_rzLmwZXXEe6o-PbYFHOjDw?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=CK_CLE_CLIENT?" reject="true"/>
+    <constraint id="_6mSHXZXaEe6o-PbYFHOjDw" name="CK_TYPE" ref="resource.md#_h9O_4ZXYEe6o-PbYFHOjDw?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=CK_TYPE?" reject="true"/>
+    <constraint id="_6mSHXpXaEe6o-PbYFHOjDw" name="CK_STATUS" ref="resource.md#_Sw_fMZXYEe6o-PbYFHOjDw?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=CK_STATUS?" reject="true"/>
     <setDescriptor id="_3MyCEIbKEe6ks8FmZ4As0Q" label="A"/>
   </datastore>
   <datastore id="_wjmuoIbKEe6ks8FmZ4As0Q" alias="SAS_CLIENT" dataset="_wjmuvYbKEe6ks8FmZ4As0Q" ref="resource.md#_knCaoYU4Ee6_ZKlljuliUA?fileId=_jy4uQIPiEe6_ZKlljuliUA$type=md$name=SAS_CLIENT?">
@@ -103,6 +106,9 @@
     <field id="_z8WzJIbKEe6ks8FmZ4As0Q" name="STATUS" ref="resource.md#_5CwEgIVyEe6_ZKlljuliUA?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=STATUS?"/>
     <constraint id="_z8WzKobKEe6ks8FmZ4As0Q" name="PK_DWH_COMPTE" ref="resource.md#_5RMwMIVyEe6_ZKlljuliUA?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=PK_DWH_COMPTE?" reject="true"/>
     <constraint id="_LyAMxoq0Ee6eVfFnYwgOWA" name="CK_CABINET" ref="resource.md#_b4wvEYluEe6eVfFnYwgOWA?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=CK_CABINET?" reject="true"/>
+    <constraint id="_6mWYxZXaEe6o-PbYFHOjDw" name="CK_CLE_COMPTE" ref="resource.md#_6HsDoZXWEe6o-PbYFHOjDw?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=CK_CLE_COMPTE?" reject="true"/>
+    <constraint id="_6mWYxpXaEe6o-PbYFHOjDw" name="CK_TYPE" ref="resource.md#_f9d9AZXXEe6o-PbYFHOjDw?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=CK_TYPE?" reject="true"/>
+    <constraint id="_6mWYx5XaEe6o-PbYFHOjDw" name="CK_STATUS" ref="resource.md#_MAJS8ZXXEe6o-PbYFHOjDw?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=CK_STATUS?" reject="true"/>
   </datastore>
   <datastore id="_OxS0gIioEe6IrbQn0Hrt2g" alias="TRANSCO" dataset="_wjmuvYbKEe6ks8FmZ4As0Q" ref="resource.md#_Xv_mMYV5Ee6_ZKlljuliUA?fileId=_jy4uQIPiEe6_ZKlljuliUA$type=md$name=TRANSCO?">
     <field id="_OxUps4ioEe6IrbQn0Hrt2g" fullAlias="LIBELLE" name="LIBELLE" ref="resource.md#_X3GTwIV5Ee6_ZKlljuliUA?fileId=_jy4uQIPiEe6_ZKlljuliUA$type=md$name=LIBELLE?"/>
@@ -122,6 +128,12 @@
     <field id="_R8-tYoioEe6IrbQn0Hrt2g" fullAlias="CODE" name="CODE" ref="resource.md#_X3FssIV5Ee6_ZKlljuliUA?fileId=_jy4uQIPiEe6_ZKlljuliUA$type=md$name=CODE?"/>
     <field id="_R8-tYYioEe6IrbQn0Hrt2g" fullAlias="TYPE" name="TYPE" ref="resource.md#_X3FFoIV5Ee6_ZKlljuliUA?fileId=_jy4uQIPiEe6_ZKlljuliUA$type=md$name=TYPE?"/>
   </datastore>
+  <datastore id="_iUrB0JAtEe6t5eaemPY27Q" alias="TRANSCO_4" dataset="_wjmuvYbKEe6ks8FmZ4As0Q" ref="resource.md#_Xv_mMYV5Ee6_ZKlljuliUA?fileId=_jy4uQIPiEe6_ZKlljuliUA$type=md$name=TRANSCO?">
+    <field id="_iVEqcpAtEe6t5eaemPY27Q" fullAlias="CODE" name="CODE" ref="resource.md#_X3FssIV5Ee6_ZKlljuliUA?fileId=_jy4uQIPiEe6_ZKlljuliUA$type=md$name=CODE?"/>
+    <field id="_iVEqc5AtEe6t5eaemPY27Q" fullAlias="LIBELLE" name="LIBELLE" ref="resource.md#_X3GTwIV5Ee6_ZKlljuliUA?fileId=_jy4uQIPiEe6_ZKlljuliUA$type=md$name=LIBELLE?"/>
+    <field id="_iVEqdJAtEe6t5eaemPY27Q" fullAlias="CATEGORIE" name="CATEGORIE" ref="resource.md#_X3G60IV5Ee6_ZKlljuliUA?fileId=_jy4uQIPiEe6_ZKlljuliUA$type=md$name=CATEGORIE?"/>
+    <field id="_iVEqcZAtEe6t5eaemPY27Q" fullAlias="TYPE" name="TYPE" ref="resource.md#_X3FFoIV5Ee6_ZKlljuliUA?fileId=_jy4uQIPiEe6_ZKlljuliUA$type=md$name=TYPE?"/>
+  </datastore>
   <join id="_-BfQEIbKEe6ks8FmZ4As0Q" location="SRC" joinType="Left_Join" left="_wjmuoIbKEe6ks8FmZ4As0Q" order="10" right="_z8WzIIbKEe6ks8FmZ4As0Q">
     <expression>DWH_COMPTE.CLE_COMPTE = SAS_CLIENT.CLE_COMPTE</expression>
   </join>
@@ -140,14 +152,22 @@ and TRANSCO_2.CATEGORIE = 'CLIENT']]></expression>
 and TRANSCO_3.TYPE = 'SEXE'
 and TRANSCO_3.CATEGORIE = 'CLIENT']]></expression>
   </join>
+  <join id="_k7J74JAtEe6t5eaemPY27Q" location="SRC" joinType="Left_Join" left="_wjmuoIbKEe6ks8FmZ4As0Q" order="90" right="_iUrB0JAtEe6t5eaemPY27Q">
+    <expression><![CDATA[TRANSCO_4.CODE = SAS_CLIENT.MUTUELLE
+and TRANSCO_4.TYPE = 'MUTUELLE'
+and TRANSCO_4.CATEGORIE = 'CLIENT']]></expression>
+  </join>
   <template id="_3MyCNYbKEe6ks8FmZ4As0Q" name="I_DWH_CLIENT" process="resource.proc#_jkWgEFEJEeO7Vo9WeM2sCg?fileId=_jkWgEFEJEeO7Vo9WeM2sCg$type=proc$name=INTEGRATION%20Oracle?" targetId="_vtbUkIbKEe6ks8FmZ4As0Q"/>
-  <template id="_TWsdoIbMEe6ks8FmZ4As0Q" name="R_DWH_CLIENT" process="resource.proc#_cvMAIERgEd22W6kpnG-bRg?fileId=_cvMAIERgEd22W6kpnG-bRg$type=proc$name=REJECT%20Oracle?" targetId="_vtbUkIbKEe6ks8FmZ4As0Q"/>
+  <template id="_TWsdoIbMEe6ks8FmZ4As0Q" name="R_DWH_CLIENT" process="resource.proc#_cvMAIERgEd22W6kpnG-bRg?fileId=_cvMAIERgEd22W6kpnG-bRg$type=proc$name=REJECT%20Oracle?" targetId="_vtbUkIbKEe6ks8FmZ4As0Q">
+    <parameter id="_IplykJXyEe6o-PbYFHOjDw" name="deletePreviousRejects" value="false"/>
+  </template>
   <dataSet id="_wjmuvYbKEe6ks8FmZ4As0Q">
     <container>_wjmuoIbKEe6ks8FmZ4As0Q</container>
     <container>_z8WzIIbKEe6ks8FmZ4As0Q</container>
     <container>_OxS0gIioEe6IrbQn0Hrt2g</container>
     <container>_Q7k6wIioEe6IrbQn0Hrt2g</container>
     <container>_R89fQIioEe6IrbQn0Hrt2g</container>
+    <container>_iUrB0JAtEe6t5eaemPY27Q</container>
   </dataSet>
   <dataSet id="_2x4OwIbKEe6ks8FmZ4As0Q">
     <container>_vtbUkIbKEe6ks8FmZ4As0Q</container>
@@ -178,6 +198,10 @@ and TRANSCO_3.CATEGORIE = 'CLIENT']]></expression>
     <usedField>#_R8-tZIioEe6IrbQn0Hrt2g</usedField>
     <usedField>#_R8-tYoioEe6IrbQn0Hrt2g</usedField>
     <usedField>#_R8-tYYioEe6IrbQn0Hrt2g</usedField>
+    <usedField>#_iVEqcpAtEe6t5eaemPY27Q</usedField>
+    <usedField>#_iVEqc5AtEe6t5eaemPY27Q</usedField>
+    <usedField>#_iVEqdJAtEe6t5eaemPY27Q</usedField>
+    <usedField>#_iVEqcZAtEe6t5eaemPY27Q</usedField>
   </hint>
   <diagram><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:map="http://www.indy.com/v2/map" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.1/notation" xsi:schemaLocation="http://www.eclipse.org/gmf/runtime/1.0.1/notation " xmi:id="_ujreQobKEe6ks8FmZ4As0Q" type="Map" measurementUnit="Pixel">
@@ -186,28 +210,35 @@ and TRANSCO_3.CATEGORIE = 'CLIENT']]></expression>
     <styles xmi:type="notation:FontStyle" xmi:id="_-ByLAobKEe6ks8FmZ4As0Q" fontName="Segoe UI"/>
     <styles xmi:type="notation:FillStyle" xmi:id="_-ByLA4bKEe6ks8FmZ4As0Q"/>
     <element xmi:type="map:Join" href="resource.map#_-BfQEIbKEe6ks8FmZ4As0Q?fileId=_vAFAAIbCEe6ks8FmZ4As0Q$type=map?"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-ByLBIbKEe6ks8FmZ4As0Q" x="296" y="252"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-ByLBIbKEe6ks8FmZ4As0Q" x="296" y="371"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_TacJ4IioEe6IrbQn0Hrt2g" type="2005">
     <styles xmi:type="notation:DescriptionStyle" xmi:id="_TacJ4YioEe6IrbQn0Hrt2g"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_TacJ4oioEe6IrbQn0Hrt2g" fontName="Segoe UI"/>
     <styles xmi:type="notation:FillStyle" xmi:id="_TacJ44ioEe6IrbQn0Hrt2g"/>
     <element xmi:type="map:Join" href="resource.map#_TZ7zkIioEe6IrbQn0Hrt2g?fileId=_vAFAAIbCEe6ks8FmZ4As0Q$type=map?"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TacJ5IioEe6IrbQn0Hrt2g" x="296" y="397"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TacJ5IioEe6IrbQn0Hrt2g" x="296" y="516"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_WmGNkIioEe6IrbQn0Hrt2g" type="2005">
     <styles xmi:type="notation:DescriptionStyle" xmi:id="_WmGNkYioEe6IrbQn0Hrt2g"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_WmGNkoioEe6IrbQn0Hrt2g" fontName="Segoe UI"/>
     <styles xmi:type="notation:FillStyle" xmi:id="_WmGNk4ioEe6IrbQn0Hrt2g"/>
     <element xmi:type="map:Join" href="resource.map#_Wlo6kIioEe6IrbQn0Hrt2g?fileId=_vAFAAIbCEe6ks8FmZ4As0Q$type=map?"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WmGNlIioEe6IrbQn0Hrt2g" x="296" y="185"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WmGNlIioEe6IrbQn0Hrt2g" x="296" y="303"/>
   </children>
   <children xmi:type="notation:Node" xmi:id="_XZ3z4IioEe6IrbQn0Hrt2g" type="2005">
     <styles xmi:type="notation:DescriptionStyle" xmi:id="_XZ3z4YioEe6IrbQn0Hrt2g"/>
     <styles xmi:type="notation:FontStyle" xmi:id="_XZ3z4oioEe6IrbQn0Hrt2g" fontName="Segoe UI"/>
     <styles xmi:type="notation:FillStyle" xmi:id="_XZ3z44ioEe6IrbQn0Hrt2g"/>
     <element xmi:type="map:Join" href="resource.map#_XZHl8IioEe6IrbQn0Hrt2g?fileId=_vAFAAIbCEe6ks8FmZ4As0Q$type=map?"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XZ3z5IioEe6IrbQn0Hrt2g" x="296" y="319"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XZ3z5IioEe6IrbQn0Hrt2g" x="296" y="439"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_lAVW0JAtEe6t5eaemPY27Q" type="2005">
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_lAVW0ZAtEe6t5eaemPY27Q"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_lAVW0pAtEe6t5eaemPY27Q" fontName="Segoe UI"/>
+    <styles xmi:type="notation:FillStyle" xmi:id="_lAVW05AtEe6t5eaemPY27Q"/>
+    <element xmi:type="map:Join" href="resource.map#_k7J74JAtEe6t5eaemPY27Q?fileId=_vAFAAIbCEe6ks8FmZ4As0Q$type=map?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_lAVW1JAtEe6t5eaemPY27Q" x="296" y="226"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_z8WzQYbKEe6ks8FmZ4As0Q" type="2004" fontName="Segoe UI">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fpOjcIcSEe6hMcZPwGwPvA" source="com.indy.gmf.map.diagram.sort">
@@ -230,7 +261,7 @@ and TRANSCO_3.CATEGORIE = 'CLIENT']]></expression>
     </children>
     <children xmi:type="notation:BasicCompartment" xmi:id="_z8WzT4bKEe6ks8FmZ4As0Q" type="7007"/>
     <element xmi:type="map:Datastore" href="resource.map#_z8WzIIbKEe6ks8FmZ4As0Q?fileId=_vAFAAIbCEe6ks8FmZ4As0Q$type=map?"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_z8WzQobKEe6ks8FmZ4As0Q" x="362" y="187"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_z8WzQobKEe6ks8FmZ4As0Q" x="362" y="342"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_OxisIIioEe6IrbQn0Hrt2g" type="2004" fontName="Segoe UI">
     <children xmi:type="notation:DecorationNode" xmi:id="_OxisIoioEe6IrbQn0Hrt2g" type="5005"/>
@@ -250,7 +281,7 @@ and TRANSCO_3.CATEGORIE = 'CLIENT']]></expression>
     </children>
     <children xmi:type="notation:BasicCompartment" xmi:id="_OxisLoioEe6IrbQn0Hrt2g" type="7007"/>
     <element xmi:type="map:Datastore" href="resource.map#_OxS0gIioEe6IrbQn0Hrt2g?fileId=_vAFAAIbCEe6ks8FmZ4As0Q$type=map?"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OxisIYioEe6IrbQn0Hrt2g" x="362" y="457"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_OxisIYioEe6IrbQn0Hrt2g" x="362" y="612"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_Q7zkQIioEe6IrbQn0Hrt2g" type="2004" fontName="Segoe UI">
     <children xmi:type="notation:DecorationNode" xmi:id="_Q7zkQoioEe6IrbQn0Hrt2g" type="5005"/>
@@ -270,7 +301,7 @@ and TRANSCO_3.CATEGORIE = 'CLIENT']]></expression>
     </children>
     <children xmi:type="notation:BasicCompartment" xmi:id="_Q7zkToioEe6IrbQn0Hrt2g" type="7007"/>
     <element xmi:type="map:Datastore" href="resource.map#_Q7k6wIioEe6IrbQn0Hrt2g?fileId=_vAFAAIbCEe6ks8FmZ4As0Q$type=map?"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Q7zkQYioEe6IrbQn0Hrt2g" x="362" y="32"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Q7zkQYioEe6IrbQn0Hrt2g" x="362" y="187"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_R9j8MIioEe6IrbQn0Hrt2g" type="2004" fontName="Segoe UI">
     <children xmi:type="notation:DecorationNode" xmi:id="_R9kjQIioEe6IrbQn0Hrt2g" type="5005"/>
@@ -290,7 +321,27 @@ and TRANSCO_3.CATEGORIE = 'CLIENT']]></expression>
     </children>
     <children xmi:type="notation:BasicCompartment" xmi:id="_R9lKWoioEe6IrbQn0Hrt2g" type="7007"/>
     <element xmi:type="map:Datastore" href="resource.map#_R89fQIioEe6IrbQn0Hrt2g?fileId=_vAFAAIbCEe6ks8FmZ4As0Q$type=map?"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R9j8MYioEe6IrbQn0Hrt2g" x="362" y="302"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_R9j8MYioEe6IrbQn0Hrt2g" x="362" y="457"/>
+  </children>
+  <children xmi:type="notation:Shape" xmi:id="_iVjLkJAtEe6t5eaemPY27Q" type="2004" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_iVjyoJAtEe6t5eaemPY27Q" type="5005"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_iVjyoZAtEe6t5eaemPY27Q" type="5007"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_iVjyopAtEe6t5eaemPY27Q" type="7003"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_iVjyo5AtEe6t5eaemPY27Q" type="7009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_iVjypJAtEe6t5eaemPY27Q" type="7004">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_iVjypZAtEe6t5eaemPY27Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_iVjyppAtEe6t5eaemPY27Q"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_iVjyp5AtEe6t5eaemPY27Q" type="5009">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_iVjyqJAtEe6t5eaemPY27Q"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_iVjyqZAtEe6t5eaemPY27Q" type="7005">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_iVjyqpAtEe6t5eaemPY27Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_iVjyq5AtEe6t5eaemPY27Q"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_iVjyrJAtEe6t5eaemPY27Q" type="7007"/>
+    <element xmi:type="map:Datastore" href="resource.map#_iUrB0JAtEe6t5eaemPY27Q?fileId=_vAFAAIbCEe6ks8FmZ4As0Q$type=map?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iVjLkZAtEe6t5eaemPY27Q" x="362" y="32"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_wjmux4bKEe6ks8FmZ4As0Q" type="2004" fontName="Segoe UI">
     <children xmi:type="notation:DecorationNode" xmi:id="_wjmuyYbKEe6ks8FmZ4As0Q" type="5005"/>
@@ -310,7 +361,7 @@ and TRANSCO_3.CATEGORIE = 'CLIENT']]></expression>
     </children>
     <children xmi:type="notation:BasicCompartment" xmi:id="_wjmu1YbKEe6ks8FmZ4As0Q" type="7007"/>
     <element xmi:type="map:Datastore" href="resource.map#_wjmuoIbKEe6ks8FmZ4As0Q?fileId=_vAFAAIbCEe6ks8FmZ4As0Q$type=map?"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wjmuyIbKEe6ks8FmZ4As0Q" x="32" y="149"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wjmuyIbKEe6ks8FmZ4As0Q" x="32" y="232"/>
   </children>
   <children xmi:type="notation:Shape" xmi:id="_vtuPgIbKEe6ks8FmZ4As0Q" type="2004" fontName="Segoe UI">
     <children xmi:type="notation:DecorationNode" xmi:id="_vtuPgobKEe6ks8FmZ4As0Q" type="5005"/>
@@ -330,13 +381,13 @@ and TRANSCO_3.CATEGORIE = 'CLIENT']]></expression>
     </children>
     <children xmi:type="notation:BasicCompartment" xmi:id="_vtuPjobKEe6ks8FmZ4As0Q" type="7007"/>
     <element xmi:type="map:Datastore" href="resource.map#_vtbUkIbKEe6ks8FmZ4As0Q?fileId=_vAFAAIbCEe6ks8FmZ4As0Q$type=map?"/>
-    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vtuPgYbKEe6ks8FmZ4As0Q" x="589" y="120"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vtuPgYbKEe6ks8FmZ4As0Q" x="596" y="204"/>
   </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_ujreQ4bKEe6ks8FmZ4As0Q"/>
   <element xmi:type="map:Map" href="resource.map#_vAFAAIbCEe6ks8FmZ4As0Q?fileId=_vAFAAIbCEe6ks8FmZ4As0Q$type=map$name=LOAD_DWH_CLIENT?"/>
   <edges xmi:type="notation:Edge" xmi:id="_3M7zGIbKEe6ks8FmZ4As0Q" type="targetLink" source="_vtuPgIbKEe6ks8FmZ4As0Q" target="_z8WzQYbKEe6ks8FmZ4As0Q">
     <element xsi:nil="true"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_3M7zGYbKEe6ks8FmZ4As0Q" points="[0, 0, 210, 265]$[-155, -209, 55, 56]$[-210, -265, 0, 0]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_3M7zGYbKEe6ks8FmZ4As0Q" points="[0, 0, 210, 202]$[-61, -85, 149, 117]$[-94, -102, 116, 100]$[-210, -202, 0, 0]"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_3M7zHobKEe6ks8FmZ4As0Q" type="targetSetLink" source="_vtuPgIbKEe6ks8FmZ4As0Q" target="_vtuPgIbKEe6ks8FmZ4As0Q">
     <element xmi:type="map:SetDescriptor" href="resource.map#_3MyCEIbKEe6ks8FmZ4As0Q?fileId=_vAFAAIbCEe6ks8FmZ4As0Q$type=map?"/>
@@ -344,11 +395,11 @@ and TRANSCO_3.CATEGORIE = 'CLIENT']]></expression>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_-ByLBYbKEe6ks8FmZ4As0Q" type="joinLink" source="_-ByLAIbKEe6ks8FmZ4As0Q" target="_wjmux4bKEe6ks8FmZ4As0Q">
     <element xsi:nil="true"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-ByLBobKEe6ks8FmZ4As0Q" points="[0, 0, 54, 49]$[60, 0, 114, 49]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-ByLBobKEe6ks8FmZ4As0Q" points="[17, 0, 381, -73]$[77, 0, 441, -73]"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_-ByLB4bKEe6ks8FmZ4As0Q" type="joinLink" source="_-ByLAIbKEe6ks8FmZ4As0Q" target="_z8WzQYbKEe6ks8FmZ4As0Q">
     <element xsi:nil="true"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-ByLCIbKEe6ks8FmZ4As0Q" points="[0, 0, 150, -320]$[60, 0, 210, -320]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-ByLCIbKEe6ks8FmZ4As0Q" points="[17, 0, 79, -1]$[77, 0, 139, -1]"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_-ByLCYbKEe6ks8FmZ4As0Q" type="targetDataSetLink" source="_vtuPgIbKEe6ks8FmZ4As0Q" target="_vtuPgIbKEe6ks8FmZ4As0Q">
     <element xmi:type="map:DataSet" href="resource.map#_wjmuvYbKEe6ks8FmZ4As0Q?fileId=_vAFAAIbCEe6ks8FmZ4As0Q$type=map?"/>
@@ -360,39 +411,51 @@ and TRANSCO_3.CATEGORIE = 'CLIENT']]></expression>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_Tad_EIioEe6IrbQn0Hrt2g" type="joinLink" source="_TacJ4IioEe6IrbQn0Hrt2g" target="_OxisIIioEe6IrbQn0Hrt2g">
     <element xsi:nil="true"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Tad_EYioEe6IrbQn0Hrt2g" points="[17, 0, 516, 358]$[77, 0, 576, 358]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Tad_EYioEe6IrbQn0Hrt2g" points="[17, 4, 85, -403]$[77, 47, 145, -360]"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_TafNMIioEe6IrbQn0Hrt2g" type="joinLink" source="_TacJ4IioEe6IrbQn0Hrt2g" target="_wjmux4bKEe6ks8FmZ4As0Q">
     <element xsi:nil="true"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_TafNMYioEe6IrbQn0Hrt2g" points="[17, 0, 170, 216]$[77, 0, 230, 216]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_TafNMYioEe6IrbQn0Hrt2g" points="[17, -4, 381, -193]$[77, 37, 441, -152]"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_WmG0oIioEe6IrbQn0Hrt2g" type="joinLink" source="_WmGNkIioEe6IrbQn0Hrt2g" target="_wjmux4bKEe6ks8FmZ4As0Q">
     <element xsi:nil="true"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_WmG0oYioEe6IrbQn0Hrt2g" points="[17, 0, 170, 301]$[77, 0, 230, 301]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_WmG0oYioEe6IrbQn0Hrt2g" points="[17, 0, 381, 12]$[77, 0, 441, 12]"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_WmIp0IioEe6IrbQn0Hrt2g" type="joinLink" source="_WmGNkIioEe6IrbQn0Hrt2g" target="_Q7zkQIioEe6IrbQn0Hrt2g">
     <element xsi:nil="true"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_WmIp0YioEe6IrbQn0Hrt2g" points="[17, 0, 530, 280]$[77, 0, 590, 280]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_WmIp0YioEe6IrbQn0Hrt2g" points="[17, 0, 85, 219]$[77, 0, 145, 219]"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_XZ6QIIioEe6IrbQn0Hrt2g" type="joinLink" source="_XZ3z4IioEe6IrbQn0Hrt2g" target="_wjmux4bKEe6ks8FmZ4As0Q">
     <element xsi:nil="true"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XZ6QIYioEe6IrbQn0Hrt2g" points="[17, 4, 170, 421]$[77, -34, 230, 383]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XZ6QIYioEe6IrbQn0Hrt2g" points="[17, 0, 381, 128]$[77, 0, 441, 128]"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_XZ63MIioEe6IrbQn0Hrt2g" type="joinLink" source="_XZ3z4IioEe6IrbQn0Hrt2g" target="_R9j8MIioEe6IrbQn0Hrt2g">
     <element xsi:nil="true"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XZ63MYioEe6IrbQn0Hrt2g" points="[17, -4, 545, 203]$[77, -47, 605, 160]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_XZ63MYioEe6IrbQn0Hrt2g" points="[17, 0, 85, 65]$[77, 0, 145, 65]"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_AbJuAIirEe6IrbQn0Hrt2g" type="targetLink" source="_vtuPgIbKEe6ks8FmZ4As0Q" target="_OxisIIioEe6IrbQn0Hrt2g">
     <element xsi:nil="true"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_AbJuAYirEe6IrbQn0Hrt2g" points="[0, 0, 221, 133]$[-94, -52, 127, 81]$[-221, -133, 0, 0]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_AbJuAYirEe6IrbQn0Hrt2g" points="[0, 0, 221, 361]$[-155, -279, 66, 82]$[-221, -361, 0, 0]"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_GqYQYIirEe6IrbQn0Hrt2g" type="targetLink" source="_vtuPgIbKEe6ks8FmZ4As0Q" target="_Q7zkQIioEe6IrbQn0Hrt2g">
     <element xsi:nil="true"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GqYQYYirEe6IrbQn0Hrt2g" points="[0, 0, 221, 0]$[-221, 0, 0, 0]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GqYQYYirEe6IrbQn0Hrt2g" points="[0, 0, 221, 74]$[-94, 0, 127, 74]$[-221, -74, 0, 0]"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_RZFOwIirEe6IrbQn0Hrt2g" type="targetLink" source="_vtuPgIbKEe6ks8FmZ4As0Q" target="_R9j8MIioEe6IrbQn0Hrt2g">
     <element xsi:nil="true"/>
-    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_RZFOwYirEe6IrbQn0Hrt2g" points="[0, 0, 221, -315]$[-155, 232, 66, -83]$[-221, 315, 0, 0]"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_RZFOwYirEe6IrbQn0Hrt2g" points="[0, 0, 221, -207]$[-61, 96, 160, -111]$[-94, 113, 127, -94]$[-221, 207, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_lAXMAJAtEe6t5eaemPY27Q" type="joinLink" source="_lAVW0JAtEe6t5eaemPY27Q" target="_iVjLkJAtEe6t5eaemPY27Q">
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_lAXMAZAtEe6t5eaemPY27Q" points="[17, -4, 186, -141]$[77, -70, 246, -207]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_lAXzEJAtEe6t5eaemPY27Q" type="joinLink" source="_lAVW0JAtEe6t5eaemPY27Q" target="_wjmux4bKEe6ks8FmZ4As0Q">
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_lAXzEZAtEe6t5eaemPY27Q" points="[17, 4, 381, 217]$[77, -55, 441, 158]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_463yoJAtEe6t5eaemPY27Q" type="targetLink" source="_vtuPgIbKEe6ks8FmZ4As0Q" target="_iVjLkJAtEe6t5eaemPY27Q">
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_463yoZAtEe6t5eaemPY27Q" points="[0, 0, 221, -375]$[-155, 292, 66, -83]$[-221, 375, 0, 0]"/>
   </edges>
 </notation:Diagram>
 ]]></diagram>

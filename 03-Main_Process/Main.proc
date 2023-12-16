@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proc:process xmlns:proc="http://www.example.org/proc" id="6e41240c-11d6-4e41-8724-ab0aeb6ac93d">
+  <subProcess id="4f9d6eb0-8033-4d96-b901-30b26b849f3b" isBeginAction="false" name="CAS DE SYNTHESE" nbCycles="-1" toleratedError="false">
+    <actionCode id="693522a9-a2bd-4953-ae08-ccde652e3f7f" isBeginAction="false" name="ExecuteDelivery" nbCycles="-1" toleratedError="false" technology="com.indy.engine.actionCodes.ExecDeliveryActionCodeI">
+      <parameter id="de7ef1f9-4188-4fb1-a7fd-405d1354cd3e" name="DELIV_NAME" type="String" value="SCAN_REPOSITORY"/>
+    </actionCode>
+  </subProcess>
+  <diagram><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.1/notation" xmlns:proc="http://www.example.org/proc" xsi:schemaLocation="http://www.eclipse.org/gmf/runtime/1.0.1/notation http://www.eclipse.org/gmf/runtime/1.0.2/notation#/?fileId=6e41240c-11d6-4e41-8724-ab0aeb6ac93d?">
+  <notation:Diagram xmi:id="_1IfHQJXtEe6o-PbYFHOjDw" type="Proc" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_3zAMwJXtEe6o-PbYFHOjDw" type="2004">
+      <children xmi:type="notation:Node" xmi:id="_3zCpAJXtEe6o-PbYFHOjDw" type="5004"/>
+      <children xmi:type="notation:Node" xmi:id="_3zCpAZXtEe6o-PbYFHOjDw" type="7005">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_3zCpApXtEe6o-PbYFHOjDw"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_3zCpA5XtEe6o-PbYFHOjDw"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_3zCpBJXtEe6o-PbYFHOjDw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_3zDQEJXtEe6o-PbYFHOjDw" type="7006">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_3zDQEZXtEe6o-PbYFHOjDw"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_3zDQEpXtEe6o-PbYFHOjDw"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_3zDQE5XtEe6o-PbYFHOjDw"/>
+      </children>
+      <styles xmi:type="notation:ShapeStyle" xmi:id="_3zAMwZXtEe6o-PbYFHOjDw" fontName="Segoe UI"/>
+      <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_3zAMwpXtEe6o-PbYFHOjDw"/>
+      <element xmi:type="proc:SubActionProcess" href="resource.proc#4f9d6eb0-8033-4d96-b901-30b26b849f3b?fileId=6e41240c-11d6-4e41-8724-ab0aeb6ac93d$type=proc$name=CAS%20DE%20SYNTHESE?"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3zAMw5XtEe6o-PbYFHOjDw" x="196" y="99"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_1IfHQZXtEe6o-PbYFHOjDw"/>
+    <element xmi:type="proc:ActionProcess" href="resource.proc#6e41240c-11d6-4e41-8724-ab0aeb6ac93d?fileId=6e41240c-11d6-4e41-8724-ab0aeb6ac93d$type=proc$name=Main?"/>
+  </notation:Diagram>
+  <notation:Diagram xmi:id="_6_-fEJXtEe6o-PbYFHOjDw" type="Proc" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_7whLMJXtEe6o-PbYFHOjDw" type="2001">
+      <children xmi:type="notation:Node" xmi:id="_7wnR0JXtEe6o-PbYFHOjDw" type="5001"/>
+      <children xmi:type="notation:Node" xmi:id="_7wn44JXtEe6o-PbYFHOjDw" type="7001">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_7wn44ZXtEe6o-PbYFHOjDw"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_7wn44pXtEe6o-PbYFHOjDw"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_7wn445XtEe6o-PbYFHOjDw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_7wn45JXtEe6o-PbYFHOjDw" type="7002">
+        <styles xmi:type="notation:DrawerStyle" xmi:id="_7wn45ZXtEe6o-PbYFHOjDw"/>
+        <styles xmi:type="notation:SortingStyle" xmi:id="_7wn45pXtEe6o-PbYFHOjDw"/>
+        <styles xmi:type="notation:FilteringStyle" xmi:id="_7wn455XtEe6o-PbYFHOjDw"/>
+      </children>
+      <styles xmi:type="notation:ShapeStyle" xmi:id="_7whLMZXtEe6o-PbYFHOjDw" fontName="Segoe UI"/>
+      <element xmi:type="proc:ActionCode" href="resource.proc#693522a9-a2bd-4953-ae08-ccde652e3f7f?fileId=6e41240c-11d6-4e41-8724-ab0aeb6ac93d$type=proc$name=ExecuteDelivery?"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_7whLMpXtEe6o-PbYFHOjDw" x="293" y="111"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_6_-fEZXtEe6o-PbYFHOjDw"/>
+    <element xmi:type="proc:SubActionProcess" href="resource.proc#4f9d6eb0-8033-4d96-b901-30b26b849f3b?fileId=6e41240c-11d6-4e41-8724-ab0aeb6ac93d$type=proc$name=CAS%20DE%20SYNTHESE?"/>
+  </notation:Diagram>
+</xmi:XMI>
+]]></diagram>
+</proc:process>

@@ -14,7 +14,7 @@
   <datastore id="_TzCVYIl_Ee6eVfFnYwgOWA" alias="DWH_TELEPHONE" control="true" dataset="_cZ9H4Yl_Ee6eVfFnYwgOWA" ref="resource.md#_5p_qsIVyEe6_ZKlljuliUA?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=DWH_TELEPHONE?" subExpression="[A]">
     <field id="_TzExoYl_Ee6eVfFnYwgOWA" enable="true" insert="true" name="STATUS" ref="resource.md#_5xSlgIVyEe6_ZKlljuliUA?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=STATUS?" update="true">
       <expression id="_fVa-AYmAEe6eVfFnYwgOWA" setDescriptorRef="_fVa-AImAEe6eVfFnYwgOWA">
-        <expression>SAS_TELEPHONE.STATUS</expression>
+        <expression>nvl(TRANSCO_2.LIBELLE,'Autre')</expression>
       </expression>
     </field>
     <field id="_TzExool_Ee6eVfFnYwgOWA" enable="true" insert="true" name="FAVORI" ref="resource.md#_5xTzoIVyEe6_ZKlljuliUA?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=FAVORI?" update="true">
@@ -54,8 +54,12 @@
     </field>
     <constraint id="_TzExpol_Ee6eVfFnYwgOWA" name="CK_PHONE_VALID " ref="resource.md#_KmQlIYlxEe6eVfFnYwgOWA?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=CK_PHONE_VALID%20?" reject="true"/>
     <constraint id="_TzExp4l_Ee6eVfFnYwgOWA" name="PK_DWH_TELEPHONE" ref="resource.md#_5xidIIVyEe6_ZKlljuliUA?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=PK_DWH_TELEPHONE?" reject="false"/>
-    <constraint id="_TzFYsIl_Ee6eVfFnYwgOWA" name="CK_PHONE_CLIENT" ref="resource.md#_nLXZ0YlwEe6eVfFnYwgOWA?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=CK_PHONE_CLIENT?" reject="true"/>
+    <constraint id="_TzFYsIl_Ee6eVfFnYwgOWA" name="CK_PHONE_CLIENT" ref="resource.md#_nLXZ0YlwEe6eVfFnYwgOWA?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=CK_PHONE_CLIENT?" reject="false"/>
     <constraint id="_TzFYsYl_Ee6eVfFnYwgOWA" name="FK_TELEPHONE_CLIENT" ref="resource.md#_5afSIIlvEe6eVfFnYwgOWA?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=FK_TELEPHONE_CLIENT?" reject="true"/>
+    <constraint id="_cIigl5XcEe6o-PbYFHOjDw" name="CK_FAVORI" ref="resource.md#__b2kkZXZEe6o-PbYFHOjDw?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=CK_FAVORI?" reject="true"/>
+    <constraint id="_cIigmJXcEe6o-PbYFHOjDw" name="CK_TYPE" ref="resource.md#_IcHEIZXaEe6o-PbYFHOjDw?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=CK_TYPE?" reject="true"/>
+    <constraint id="_cIigmZXcEe6o-PbYFHOjDw" name="CK_STATUS" ref="resource.md#_5H1o0ZXZEe6o-PbYFHOjDw?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=CK_STATUS?" reject="true"/>
+    <constraint id="_cIigmpXcEe6o-PbYFHOjDw" name="CK_PHONE" ref="resource.md#_t3TIsZXZEe6o-PbYFHOjDw?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=CK_PHONE?" reject="true"/>
     <setDescriptor id="_fVa-AImAEe6eVfFnYwgOWA" label="A"/>
   </datastore>
   <datastore id="_WZMfUIl_Ee6eVfFnYwgOWA" alias="TRANSCO" dataset="_cZ9H4Il_Ee6eVfFnYwgOWA" ref="resource.md#_Xv_mMYV5Ee6_ZKlljuliUA?fileId=_jy4uQIPiEe6_ZKlljuliUA$type=md$name=TRANSCO?">
@@ -82,6 +86,15 @@
     <constraint id="_dSQB3Yl_Ee6eVfFnYwgOWA" name="CK_CLIENT_COMPTE" ref="resource.md#_1H7HAYbNEe6hMcZPwGwPvA?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=CK_CLIENT_COMPTE?" reject="true"/>
     <constraint id="_dSQB3ol_Ee6eVfFnYwgOWA" name="FK_COMPTE_CLIENT" ref="resource.md#_6PXBkIVyEe6_ZKlljuliUA?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=FK_COMPTE_CLIENT?" reject="true"/>
     <constraint id="_dSQB34l_Ee6eVfFnYwgOWA" name="PK_DWH_CLIENT" ref="resource.md#_5pyPUIVyEe6_ZKlljuliUA?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=PK_DWH_CLIENT?" reject="true"/>
+    <constraint id="_cIk80ZXcEe6o-PbYFHOjDw" name="CK_CLE_CLIENT" ref="resource.md#_rzLmwZXXEe6o-PbYFHOjDw?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=CK_CLE_CLIENT?" reject="true"/>
+    <constraint id="_cIk80pXcEe6o-PbYFHOjDw" name="CK_TYPE" ref="resource.md#_h9O_4ZXYEe6o-PbYFHOjDw?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=CK_TYPE?" reject="true"/>
+    <constraint id="_cIk805XcEe6o-PbYFHOjDw" name="CK_STATUS" ref="resource.md#_Sw_fMZXYEe6o-PbYFHOjDw?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=CK_STATUS?" reject="true"/>
+  </datastore>
+  <datastore id="_8mKjMJAuEe6t5eaemPY27Q" alias="TRANSCO_2" dataset="_cZ9H4Il_Ee6eVfFnYwgOWA" ref="resource.md#_Xv_mMYV5Ee6_ZKlljuliUA?fileId=_jy4uQIPiEe6_ZKlljuliUA$type=md$name=TRANSCO?">
+    <field id="_8mMYYpAuEe6t5eaemPY27Q" fullAlias="CODE" name="CODE" ref="resource.md#_X3FssIV5Ee6_ZKlljuliUA?fileId=_jy4uQIPiEe6_ZKlljuliUA$type=md$name=CODE?"/>
+    <field id="_8mMYY5AuEe6t5eaemPY27Q" fullAlias="LIBELLE" name="LIBELLE" ref="resource.md#_X3GTwIV5Ee6_ZKlljuliUA?fileId=_jy4uQIPiEe6_ZKlljuliUA$type=md$name=LIBELLE?"/>
+    <field id="_8mMYZJAuEe6t5eaemPY27Q" fullAlias="CATEGORIE" name="CATEGORIE" ref="resource.md#_X3G60IV5Ee6_ZKlljuliUA?fileId=_jy4uQIPiEe6_ZKlljuliUA$type=md$name=CATEGORIE?"/>
+    <field id="_8mMYYZAuEe6t5eaemPY27Q" fullAlias="TYPE" name="TYPE" ref="resource.md#_X3FFoIV5Ee6_ZKlljuliUA?fileId=_jy4uQIPiEe6_ZKlljuliUA$type=md$name=TYPE?"/>
   </datastore>
   <join id="_bDMJQIl_Ee6eVfFnYwgOWA" location="SRC" left="_Th2ewIl_Ee6eVfFnYwgOWA" order="10" right="_dSPawIl_Ee6eVfFnYwgOWA">
     <expression>SAS_TELEPHONE.CLE_CLIENT = DWH_CLIENT.CLE_CLIENT</expression>
@@ -91,12 +104,20 @@
 and TRANSCO.TYPE = 'TYPE'
 and TRANSCO.CATEGORIE = 'TELEPHONE']]></expression>
   </join>
+  <join id="_GPLr4JAvEe6t5eaemPY27Q" location="SRC" joinType="Left_Join" left="_Th2ewIl_Ee6eVfFnYwgOWA" order="50" right="_8mKjMJAuEe6t5eaemPY27Q">
+    <expression><![CDATA[TRANSCO_2.CODE = SAS_TELEPHONE.STATUS
+and TRANSCO_2.TYPE = 'STATUS'
+and TRANSCO_2.CATEGORIE = 'TELEPHONE']]></expression>
+  </join>
   <template id="_fVdaQImAEe6eVfFnYwgOWA" name="I_DWH_TELEPHONE" process="resource.proc#_jkWgEFEJEeO7Vo9WeM2sCg?fileId=_jkWgEFEJEeO7Vo9WeM2sCg$type=proc$name=INTEGRATION%20Oracle?" targetId="_TzCVYIl_Ee6eVfFnYwgOWA"/>
-  <template id="_fYXnQIojEe6eVfFnYwgOWA" name="R_DWH_TELEPHONE" process="resource.proc#_cvMAIERgEd22W6kpnG-bRg?fileId=_cvMAIERgEd22W6kpnG-bRg$type=proc$name=REJECT%20Oracle?" targetId="_TzCVYIl_Ee6eVfFnYwgOWA"/>
+  <template id="_fYXnQIojEe6eVfFnYwgOWA" name="R_DWH_TELEPHONE" process="resource.proc#_cvMAIERgEd22W6kpnG-bRg?fileId=_cvMAIERgEd22W6kpnG-bRg$type=proc$name=REJECT%20Oracle?" targetId="_TzCVYIl_Ee6eVfFnYwgOWA">
+    <parameter id="_PSziQJXyEe6o-PbYFHOjDw" name="deletePreviousRejects" value="false"/>
+  </template>
   <dataSet id="_cZ9H4Il_Ee6eVfFnYwgOWA">
     <container>_Th2ewIl_Ee6eVfFnYwgOWA</container>
     <container>_dSPawIl_Ee6eVfFnYwgOWA</container>
     <container>_WZMfUIl_Ee6eVfFnYwgOWA</container>
+    <container>_8mKjMJAuEe6t5eaemPY27Q</container>
   </dataSet>
   <dataSet id="_cZ9H4Yl_Ee6eVfFnYwgOWA">
     <container>_TzCVYIl_Ee6eVfFnYwgOWA</container>
@@ -114,6 +135,10 @@ and TRANSCO.CATEGORIE = 'TELEPHONE']]></expression>
     <usedField>#_WZNtcol_Ee6eVfFnYwgOWA</usedField>
     <usedField>#_dSPawol_Ee6eVfFnYwgOWA</usedField>
     <usedField>#_dSQB0Yl_Ee6eVfFnYwgOWA</usedField>
+    <usedField>#_8mMYYpAuEe6t5eaemPY27Q</usedField>
+    <usedField>#_8mMYY5AuEe6t5eaemPY27Q</usedField>
+    <usedField>#_8mMYZJAuEe6t5eaemPY27Q</usedField>
+    <usedField>#_8mMYYZAuEe6t5eaemPY27Q</usedField>
   </hint>
   <diagram><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:map="http://www.indy.com/v2/map" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.1/notation" xsi:schemaLocation="http://www.eclipse.org/gmf/runtime/1.0.1/notation " xmi:id="_Sod_sIl_Ee6eVfFnYwgOWA" type="Map" measurementUnit="Pixel">
@@ -211,6 +236,33 @@ and TRANSCO.CATEGORIE = 'TELEPHONE']]></expression>
     <element xmi:type="map:Datastore" href="resource.map#_dSPawIl_Ee6eVfFnYwgOWA?fileId=_Smm-gIl_Ee6eVfFnYwgOWA$type=map?"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_dSWIc4l_Ee6eVfFnYwgOWA" x="594" y="32"/>
   </children>
+  <children xmi:type="notation:Shape" xmi:id="_8mbo8JAuEe6t5eaemPY27Q" type="2004" fontName="Segoe UI">
+    <children xmi:type="notation:DecorationNode" xmi:id="_8mbo8pAuEe6t5eaemPY27Q" type="5005"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_8mbo85AuEe6t5eaemPY27Q" type="5007"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_8mbo9JAuEe6t5eaemPY27Q" type="7003"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_8mbo9ZAuEe6t5eaemPY27Q" type="7009"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_8mbo9pAuEe6t5eaemPY27Q" type="7004">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_8mbo95AuEe6t5eaemPY27Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_8mbo-JAuEe6t5eaemPY27Q"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_8mbo-ZAuEe6t5eaemPY27Q" type="5009">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_8mbo-pAuEe6t5eaemPY27Q"/>
+    </children>
+    <children xmi:type="notation:DecorationNode" xmi:id="_8mbo-5AuEe6t5eaemPY27Q" type="7005">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_8mbo_JAuEe6t5eaemPY27Q"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_8mbo_ZAuEe6t5eaemPY27Q"/>
+    </children>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_8mbo_pAuEe6t5eaemPY27Q" type="7007"/>
+    <element xmi:type="map:Datastore" href="resource.map#_8mKjMJAuEe6t5eaemPY27Q?fileId=_Smm-gIl_Ee6eVfFnYwgOWA$type=map?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8mbo8ZAuEe6t5eaemPY27Q" x="249" y="389"/>
+  </children>
+  <children xmi:type="notation:Node" xmi:id="_GPd_wJAvEe6t5eaemPY27Q" type="2005">
+    <styles xmi:type="notation:DescriptionStyle" xmi:id="_GPd_wZAvEe6t5eaemPY27Q"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_GPd_wpAvEe6t5eaemPY27Q" fontName="Segoe UI"/>
+    <styles xmi:type="notation:FillStyle" xmi:id="_GPd_w5AvEe6t5eaemPY27Q"/>
+    <element xmi:type="map:Join" href="resource.map#_GPLr4JAvEe6t5eaemPY27Q?fileId=_Smm-gIl_Ee6eVfFnYwgOWA$type=map?"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GPd_xJAvEe6t5eaemPY27Q" x="138" y="336"/>
+  </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_Sod_sYl_Ee6eVfFnYwgOWA"/>
   <element xmi:type="map:Map" href="resource.map#_Smm-gIl_Ee6eVfFnYwgOWA?fileId=_Smm-gIl_Ee6eVfFnYwgOWA$type=map$name=LOAD_DWH_TELEPHONE?"/>
   <edges xmi:type="notation:Edge" xmi:id="_bDY9kIl_Ee6eVfFnYwgOWA" type="joinLink" source="_bDXvcIl_Ee6eVfFnYwgOWA" target="_TiCE84l_Ee6eVfFnYwgOWA">
@@ -248,6 +300,18 @@ and TRANSCO.CATEGORIE = 'TELEPHONE']]></expression>
   <edges xmi:type="notation:Edge" xmi:id="_l8c8YImAEe6eVfFnYwgOWA" type="targetLink" source="_TzH0-Il_Ee6eVfFnYwgOWA" target="_dSWIcol_Ee6eVfFnYwgOWA">
     <element xsi:nil="true"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_l8c8YYmAEe6eVfFnYwgOWA" points="[0, 0, 154, 0]$[-154, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_GPf08JAvEe6t5eaemPY27Q" type="joinLink" source="_GPd_wJAvEe6t5eaemPY27Q" target="_TiCE84l_Ee6eVfFnYwgOWA">
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GPf08ZAvEe6t5eaemPY27Q" points="[-1, -1, -297, -146]$[221, 108, -75, -37]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_GPf08pAvEe6t5eaemPY27Q" type="joinLink" source="_GPd_wJAvEe6t5eaemPY27Q" target="_8mbo8JAuEe6t5eaemPY27Q">
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_GPf085AvEe6t5eaemPY27Q" points="[-1, -1, -249, -338]$[214, 291, -34, -46]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_S1mZ0JAvEe6t5eaemPY27Q" type="targetLink" source="_TzH0-Il_Ee6eVfFnYwgOWA" target="_8mbo8JAuEe6t5eaemPY27Q">
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_S1mZ0ZAvEe6t5eaemPY27Q" points="[-146, 50, 407, -142]$[-491, 171, 62, -21]"/>
   </edges>
 </notation:Diagram>
 ]]></diagram>

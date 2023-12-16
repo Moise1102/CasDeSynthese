@@ -42,8 +42,9 @@
     </field>
     <constraint id="_f0Ki0oisEe6IrbQn0Hrt2g" name="PK_DWH_EMAIL" ref="resource.md#_5iNAoIVyEe6_ZKlljuliUA?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=PK_DWH_EMAIL?" reject="false"/>
     <constraint id="_jq68goitEe6IrbQn0Hrt2g" name="CK_MAIL_VALID" ref="resource.md#_RwjBoYitEe6IrbQn0Hrt2g?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=CK_MAIL_VALID?" reject="true"/>
-    <constraint id="_jq7jkIitEe6IrbQn0Hrt2g" name="CK_EMAIL_CLIENT" ref="resource.md#_wJvqIYisEe6IrbQn0Hrt2g?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=CK_EMAIL_CLIENT?" reject="true"/>
+    <constraint id="_jq7jkIitEe6IrbQn0Hrt2g" name="CK_EMAIL_CLIENT" ref="resource.md#_wJvqIYisEe6IrbQn0Hrt2g?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=CK_EMAIL_CLIENT?" reject="false"/>
     <constraint id="_poB-sIiuEe6IrbQn0Hrt2g" name="FK_EMAIL_CLIENT" ref="resource.md#_o1B0cIiuEe6IrbQn0Hrt2g?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=FK_EMAIL_CLIENT?" reject="true"/>
+    <constraint id="_p2A9NZXcEe6o-PbYFHOjDw" name="CK_STATUS" ref="resource.md#_uHkOwZXYEe6o-PbYFHOjDw?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=CK_STATUS?" reject="true"/>
     <setDescriptor id="_s8NhsIitEe6IrbQn0Hrt2g" label="A"/>
   </datastore>
   <datastore id="_n-YVwIitEe6IrbQn0Hrt2g" alias="DWH_CLIENT" dataset="_ogbS4IitEe6IrbQn0Hrt2g" ref="resource.md#_5idfUIVyEe6_ZKlljuliUA?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=DWH_CLIENT?">
@@ -64,12 +65,17 @@
     <constraint id="_n-bZHYitEe6IrbQn0Hrt2g" name="FK_COMPTE_CLIENT" ref="resource.md#_6PXBkIVyEe6_ZKlljuliUA?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=FK_COMPTE_CLIENT?" reject="true"/>
     <constraint id="_n-bZHoitEe6IrbQn0Hrt2g" name="PK_DWH_CLIENT" ref="resource.md#_5pyPUIVyEe6_ZKlljuliUA?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=PK_DWH_CLIENT?" reject="true"/>
     <constraint id="_n-bZH4itEe6IrbQn0Hrt2g" name="CK_CLIENT_COMPTE" ref="resource.md#_1H7HAYbNEe6hMcZPwGwPvA?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=CK_CLIENT_COMPTE?" reject="true"/>
+    <constraint id="_p2LVQJXcEe6o-PbYFHOjDw" name="CK_CLE_CLIENT" ref="resource.md#_rzLmwZXXEe6o-PbYFHOjDw?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=CK_CLE_CLIENT?" reject="true"/>
+    <constraint id="_p2LVQZXcEe6o-PbYFHOjDw" name="CK_STATUS" ref="resource.md#_Sw_fMZXYEe6o-PbYFHOjDw?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=CK_STATUS?" reject="true"/>
+    <constraint id="_p2LVQpXcEe6o-PbYFHOjDw" name="CK_TYPE" ref="resource.md#_h9O_4ZXYEe6o-PbYFHOjDw?fileId=_yVv6wIPiEe6_ZKlljuliUA$type=md$name=CK_TYPE?" reject="true"/>
   </datastore>
   <join id="_iJCvgIisEe6IrbQn0Hrt2g" location="SRC" joinType="Left_Join" left="_d8zYkIisEe6IrbQn0Hrt2g" order="10" right="_n-YVwIitEe6IrbQn0Hrt2g">
     <expression>SAS_EMAIL.CLE_CLIENT = DWH_CLIENT.CLE_CLIENT</expression>
   </join>
   <template id="_s8o_gIitEe6IrbQn0Hrt2g" name="I_DWH_EMAIL" process="resource.proc#_jkWgEFEJEeO7Vo9WeM2sCg?fileId=_jkWgEFEJEeO7Vo9WeM2sCg$type=proc$name=INTEGRATION%20Oracle?" targetId="_f0ItoIisEe6IrbQn0Hrt2g"/>
-  <template id="_AjqCYIiuEe6IrbQn0Hrt2g" name="R_DWH_EMAIL" process="resource.proc#_cvMAIERgEd22W6kpnG-bRg?fileId=_cvMAIERgEd22W6kpnG-bRg$type=proc$name=REJECT%20Oracle?" targetId="_f0ItoIisEe6IrbQn0Hrt2g"/>
+  <template id="_AjqCYIiuEe6IrbQn0Hrt2g" name="R_DWH_EMAIL" process="resource.proc#_cvMAIERgEd22W6kpnG-bRg?fileId=_cvMAIERgEd22W6kpnG-bRg$type=proc$name=REJECT%20Oracle?" targetId="_f0ItoIisEe6IrbQn0Hrt2g">
+    <parameter id="_LMNgUJXyEe6o-PbYFHOjDw" name="deletePreviousRejects" value="false"/>
+  </template>
   <dataSet id="_ogbS4IitEe6IrbQn0Hrt2g">
     <container>_d8zYkIisEe6IrbQn0Hrt2g</container>
     <container>_n-YVwIitEe6IrbQn0Hrt2g</container>
